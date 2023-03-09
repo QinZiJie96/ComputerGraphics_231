@@ -36,6 +36,7 @@ screen.fill(WHITE)
 # https://kite.com/python/docs/pygame.Surface.blit
 clock= pygame.time.Clock()
 
+# show "a" value
 def FreeSystem(color='Blue', thick=3):
     pygame.draw.line(screen, color,pos1,pos2, thick)
     pygame.draw.circle(screen, color, pos1, thick)
@@ -65,6 +66,7 @@ def drawPolylines(color='GREEN', thick=3):
             poc2 = [pox2,poy2]
             pygame.draw.line(screen, color,poc1,poc2, thick)
 
+# the Animation of points' movement with text
 def AnimationFunction(a,color='Red', thick=5):
     print(a)
     x = pos1[0]*(1-a) +pos2[0]*a
@@ -109,6 +111,7 @@ while not done:
             pressed = 1            
         elif event.type == pygame.QUIT:
             done = True
+        # play and stop Ain
         elif event.type == pygame.KEYDOWN:
             if Aim:
                 Aim = False
